@@ -85,3 +85,13 @@
 .add-menu input {
     float:right;
 }
+
+#xcoord {
+    width:62px;
+    margin-left:5px;
+}
+
+#ycoord {
+    width:62px;
+    margin-right:5px;
+}

@@ -18,8 +18,8 @@ for (let i = 0; i < 11; i++) {
 
 let booths = [];
 
-booths.push(new Booth(booths.length+1, "National Coding Association", [6,7], "Programmer", "3+ years programming experience"));
-booths.push(new Booth(booths.length+1, "City of Citytown", [9,3], "IT Specialist", "Must be professional and experienced in local government."));
+//booths.push(new Booth(booths.length+1, "National Coding Association", [6,7], "Programmer", "3+ years programming experience"));
+//booths.push(new Booth(booths.length+1, "City of Citytown", [9,3], "IT Specialist", "Must be professional and experienced in local government."));
 
 for (let k = 0; k < booths.length; k++) {
     grid[booths[k].coords[1]-1][booths[k].coords[0]-1] = booths[k];
@@ -28,6 +28,8 @@ for (let k = 0; k < booths.length; k++) {
 function refreshContent(gridSpace) {
     $('#search-field').val('');
     $('#boothname').val('');
+    $('#positions').val('');
+    $('#requirements').val('');
     $('#xcoord').val('');
     $('#ycoord').val('');
     gridSpace.innerHTML = '';
@@ -64,11 +66,11 @@ $(document).ready(() => {
         let x;
         let y;
         if (event.target.nodeName === 'SPAN') {
-            x = event.target.innerHTML.match(/\((.*),/).pop();
-            y = event.target.innerHTML.match(/,(.*)\)/).pop();
+            y = event.target.innerHTML.match(/\((.*),/).pop();
+            x = event.target.innerHTML.match(/,(.*)\)/).pop();
         } else if (event.target.nodeName === 'DIV') {
-            x = event.target.childNodes[1].innerHTML.match(/\((.*),/).pop();
-            y = event.target.childNodes[1].innerHTML.match(/,(.*)\)/).pop();
+            y = event.target.childNodes[1].innerHTML.match(/\((.*),/).pop();
+            x = event.target.childNodes[1].innerHTML.match(/,(.*)\)/).pop();
         }
         $('#xcoord').val(x);
         $('#ycoord').val(y);
@@ -76,9 +78,10 @@ $(document).ready(() => {
 
     $('#btn').click((event) => {
         let input = $('#add-form').serializeArray();
-        if(grid[input[1].value][input[2].value] === null) {
-            let boothtemp = new Booth(booths.length+1, input[0].value, [input[1].value, input[2].value])
-            grid[input[1].value-1][input[2].value-1] = boothtemp;
+        console.log(input);
+        if(grid[input[3].value][input[4].value] === null) {
+            let boothtemp = new Booth(booths.length+1, input[0].value, [input[4].value, input[3].value], input[1].value, input[2].value);
+            grid[input[4].value-1][input[3].value-1] = boothtemp;
             booths.push(boothtemp);
             refreshContent(gridSpace);
         }
