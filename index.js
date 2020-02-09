@@ -74,7 +74,7 @@ $(document).ready(() => {
         }
         $('#xcoord').val(x);
         $('#ycoord').val(y);
-    });
+    }); 
 
     $('#btn').click((event) => {
         let input = $('#add-form').serializeArray();
