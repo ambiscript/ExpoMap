@@ -1,15 +1,16 @@
 .grid-container {
     display: grid;
     position: relative;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    float:left;
 }
 
 .grid-item {
     border: 1px dashed rgba(128, 128, 128, 0.5);
     font-size: 20px;
-    text-align: center;
     position: relative;
+    text-align: center;
 }
 
 .data {
@@ -47,6 +48,35 @@
     height: 50px;
     width: 50px;
     background-color: #ccf;
-
 }
 
+.highlighted {
+    background-color: #88f;
+}
+
+.add-menu {
+    float:right;
+    margin-right:30px;
+    padding: 10px;
+    background-color: #888;
+    color: #fff;
+    border-radius:10px;
+}
+.coords {
+    visibility:hidden;
+    font-size:12px;
+    color:#aaa;
+    z-index: 1;
+}
+
+.empty:hover .coords {
+    visibility: visible;
+}
+
+#navbar {
+    width: 100%;
+    margin: 0px;
+    background-color:blue;
+    margin-bottom:10px;
+    padding:5px;
+}

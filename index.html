@@ -11,17 +11,24 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="navbar"></div>
-        <div class="grid-container" id="grid"></div>
-        <div id="panel">
-            <form action="/action_page.php">
-                <label for="fname">Name: </label><input type="text" id="boothname" name="boothname"><br><br>
-                <label for="lname">Location: </label>
-                    <input type="text" id="xcoord" name="xcoord">
-                    <input type="text" id="ycoord" name="ycoord">
-                    <br><br>
-                <input id="btn" type="submit" value="Submit">
-            </form> 
+        <div class="layout">
+            <div id="navbar" class="layout-item">
+                <form id="search-form" action="/">
+                    <input type="text"id="search-field" name="search">
+                    <input id="search-btn" type="submit" value="Search">
+                </form>
+            </div>
+            <div class="layout-item grid-container" id="grid"></div>
+            <div class="layout-item add-menu">
+                <form id="add-form" action="/">
+                    <label for="boothname">Name: </label><input type="text" id="boothname" name="boothname"><br><br>
+                    <label for="location">Location: </label>
+                        <input type="text" id="xcoord" name="xcoord">
+                        <input type="text" id="ycoord" name="ycoord">
+                        <br><br>
+                    <input id="btn" type="submit" value="Submit">
+                </form> 
+            </div>
         </div>
     </body>
 </html>
