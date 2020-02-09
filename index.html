@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 
 <html>
     <head>
@@ -11,24 +12,27 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="layout">
-            <div id="navbar" class="layout-item">
-                <form id="search-form" action="/">
-                    <input type="text"id="search-field" name="search">
-                    <input id="search-btn" type="submit" value="Search">
-                </form>
-            </div>
-            <div class="layout-item grid-container" id="grid"></div>
-            <div class="layout-item add-menu">
-                <form id="add-form" action="/">
-                    <label for="boothname">Name: </label><input type="text" id="boothname" name="boothname"><br><br>
-                    <label for="location">Location: </label>
-                        <input type="text" id="xcoord" name="xcoord">
-                        <input type="text" id="ycoord" name="ycoord">
-                        <br><br>
-                    <input id="btn" type="submit" value="Submit">
-                </form> 
-            </div>
+        <div id="navbar">
+            <form id="search-form" action="/">
+                <input type="text"id="search-field" name="search">
+                <input id="search-btn" type="submit" value="Search">
+            </form>
         </div>
+        <div class="layout-item grid-container" id="grid"></div>
+        <div class="layout-item add-menu">
+            <form id="add-form" onsubmit="return false">
+                <label for="boothname">Name: </label><input type="text" id="boothname" name="boothname"><br><br>
+                <label for="positions">Positions: </label>
+                    <input type="text" id="positions" name="positions"><br><br>
+                <label for="requirements">Requirements: </label>
+                    <input type="text" id="requirements" name="requirements"><br><br>
+                <label for="location">Location: </label>
+                    <input type="text" id="xcoord" name="xcoord">
+                    <input type="text" id="ycoord" name="ycoord"><br>
+                    <br><br>
+                <input id="btn" type="submit" value="Submit">
+            </form> 
+        </div>
+        <div id="key"></div>
     </body>
 </html>

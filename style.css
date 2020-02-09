@@ -26,21 +26,20 @@
     user-select: none;
 }
 
-.booth-name {
+.booth-details {
     visibility: hidden;
     position: absolute;
     z-index: 1;
     width: 120px;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -64px;
+    left: 100%;
+    top: -100%;
     padding: 3px;
     background-color: rgba(32,32,32,0.7);
     color: #fff;
     border-radius: 10px;
 }
 
-.booth:hover .booth-name {
+.booth:hover .booth-details {
     visibility: visible;
 }
 
@@ -48,10 +47,6 @@
     height: 50px;
     width: 50px;
     background-color: #ccf;
-}
-
-.highlighted {
-    background-color: #88f;
 }
 
 .add-menu {
@@ -74,9 +69,19 @@
 }
 
 #navbar {
-    width: 100%;
-    margin: 0px;
+    width: 99%;
+    height: 23px;
+    margin: 0px 0px 0px 0px;
     background-color:blue;
     margin-bottom:10px;
     padding:5px;
+}
+
+#search-form {
+    position: relative;
+    float:right;
+}
+
+.add-menu input {
+    float:right;
 }
