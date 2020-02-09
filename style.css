@@ -1,0 +1,52 @@
+.grid-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+}
+
+.grid-item {
+    border: 1px dashed rgba(128, 128, 128, 0.5);
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.data {
+    margin: 25%;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.booth-name {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -64px;
+    padding: 3px;
+    background-color: rgba(32,32,32,0.7);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.booth:hover .booth-name {
+    visibility: visible;
+}
+
+.booth {
+    height: 50px;
+    width: 50px;
+    background-color: #ccf;
+
+}
+
